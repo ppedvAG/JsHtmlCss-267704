@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    gap: 20px; /* Abstand zwischen Artikel und Seitenleiste */
+
+    margin: 0 auto; /* Zentriert den Hauptinhalt */
+    padding: 20px; /* Innenabstand */
+}
+
+.main {
+    flex: 7; /* section nimmt 70% der Breite ein */
+    background-color: lightgray; /* Hintergrundfarbe für Artikel */
+    padding: 20px; /* Innenabstand für Artikel */
+    border-radius: 10px; /* Abgerundete Ecken für Artikel */
+}
+
+.aside {
+    flex: 3; /* aside nimmt 30% der Breite ein */
+    background-color: lightblue; /* Hintergrundfarbe für Seitenleiste */
+    padding: 20px; /* Innenabstand für Seitenleiste */
+    border-radius: 10px; /* Abgerundete Ecken für Seitenleiste */
+}

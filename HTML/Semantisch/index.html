@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+    <title>HTML - Semantische Seite</title>
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+   <header>
+        <h1>Semantische Seite</h1>
+   </header>
+   <nav role ="navigation">
+        <a href="../Basics/index.html">Basics</a>
+        <a href="../Listen/index.html">Listen</a>
+   </nav>
+   <main>
+        <aside class ="aside" role="sidebar">
+            <h3>Seitenleiste</h3>
+            <ol>
+                <li>Element 1</li>
+                <li>Element 2</li>
+                <li>Element 3</li>
+            </ol>
+        </aside>
+        
+        <section  class ="main" role ="main">
+            <h2>Section 1</h2>
+            <p>Inhalt der Section 1.</p>
+                <article class ="main">
+                    <h3>Artikel 1</h2>
+                    <p>Inhalt des <strong>Artikels 1.</strong></p>
+            </article>
+        </section>
+        
+   </main>
+   <footer>
+        <p>&copy; 2026 Meine Semantische Seite. Alle Rechte vorbehalten.</p>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+    <title>HTML - Formulare</title>
+    
+</head>    
+<body>
+    <h1>Formular</h1>
+    <form action="#" method="post"> 
+
+        <label for="vorname">Vorname:</label>
+        <input type="text" id="vorname" name="vorname" required>*
+        <br><br>
+        <label for="nachname">Nachname:</label>
+        <input type="text" id="nachname" name="nachname" required>*
+        <br><br>
+        <!-- Radio Button Auswahl -->
+        <p>Lieblichngssprache:</p>
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name ="fav_language" value="HTML">
+        &nbsp;
+        <input type="radio" id="css" name ="fav_language" value="CSS" checked>
+        <label for="css">CSS</label>
+        
+        &nbsp;
+        <input type="radio" id="js" name ="fav_language" value="JS">
+        <label for="js">JS</label>
+
+        <br><br>
+        <label for"fav_color">Lieblingsfarbe:</label>
+        <input type="color" id="fav_color" name="fav_color" value="red">
+        
+        <br><br>
+        <label for="geburtstag">Geburtstag:</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <input type="month">
+        <input type="week">
+        <input type="time" min="09:00" max="12:00">
+        <input type="datetime-local">
+        
+
+
+    </form>
+
+</body>
+</html>

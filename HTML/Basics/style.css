@@ -1,0 +1,12 @@
+.meineKlasse {
+    color: red;
+}
+#meineID {
+    color: green;
+}
+#meineID2 {
+    color: blue;
+}
+h1.meineKlasse {
+    color: orange;
+}
