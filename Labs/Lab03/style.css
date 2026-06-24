@@ -1,0 +1,75 @@
+:root{
+            font-size: 20px;
+        }
+
+        body{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: floralwhite; /* für den Fall, dass das Bild nicht geladen werden kann */
+            background-image: url(Pizza.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .form-demo{
+            background: linear-gradient(to right, rgba(0, 100, 0, 0.6), rgba(245, 245, 245, 0.4) 40%, rgba(245, 245, 245, 0.6) 60%, rgba(178, 34, 34, 0.4));
+            box-shadow: 0 0 8px black;
+            color: rgb(41, 41, 41);
+            width: 80%;
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .fieldset-demo {
+            margin-bottom: 1em;
+            color: rgb(255, 250, 240);
+            width: 46%;
+        }
+
+        legend {
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+
+        .bg-transparent {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 0.3rem 1rem;
+            border-radius: 0.3rem;
+        }
+
+        .lbl-inp-container{
+            margin-bottom: 0.5em;
+        }
+
+        label{
+            display: inline-block;
+            width: 8em;
+        }
+
+        .btn-submit{
+            background-color: rgb(255, 250, 240);
+            color: rgb(41, 41, 41);
+            border-radius: 0.2rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        .btn-submit:hover{
+            cursor: pointer;
+            background-color: rgb(215, 252, 184);
+            color: rgb(255, 250, 240);
+            border-color:rgb(115, 255, 0);
+            text-shadow: 0 0 4px rgb(41, 41, 41);
+        }
+        .output {
+            color:white;
+            background: linear-gradient(to right, rgba(0, 100, 0, 0.6), rgba(245, 245, 245, 0.4) 40%, rgba(245, 245, 245, 0.6) 60%, rgba(178, 34, 34, 0.4));
+            box-shadow: 0 0 8px black;
+            width: 80%;
+            margin: 0 auto;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width =device-width, initial-scale=1.0">
+    <title>HTML - Webformulare</title>
+
+</head>
+
+<body>
+    <h1>Formular</h1>
+    <form action="#" method="post" onsubmit="return validate()">
+        <input type="text" list="farben" autocomplete=on >​
+        <datalist id="farben">​
+            <option value="Rot"></option> ​
+            <option value="Grün"></option>​
+            <option value="Blau"></option>​
+        </datalist>
+        <br>
+        <label>Vorname eingeben</label>
+        <input type = "text" id="vorname">
+        <br>
+        <input type="submit" autofocus="on">
+        
+        
+    </form>
+
+    <script>
+        function validate() {
+            if(vorname.value.length>10 || vorname.value.length<2) {
+                alert("Der Vorname muss zwischen 2 und 10 Zeichen lang sein!")
+                return false
+            } else 
+                return true
+        }
+    </script>
+</body>
+
+</html>
