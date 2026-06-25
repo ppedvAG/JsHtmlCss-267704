@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form onsubmit="bestellung(event)" class="form-demo">
+
+        <fieldset id="pizzas" class="fieldset-demo">
+            <legend>Pizze</legend>
+            <div class="bg-transparent" >
+
+                <div class="lbl-inp-container">
+                    <label><input name="pizze" type="radio" value="marg" checked> Margherita</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label><input name="pizze" type="radio" value="funghi" > Funghi</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio" value="tonno" > Tonno</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio" value="salami" > Salami</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input name="pizze" type="radio" value="dellaCasa" > Della Casa</label>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="extras" class="fieldset-demo">
+            <legend>Extras</legend>
+            <div class="bg-transparent">
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras" value="mais"> Mais</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras" value="paprika"> Paprika</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras" value="zwiebeln"> Zwiebeln</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras" value="ei"> Ei</label>
+                </div>
+                <div class="lbl-inp-container">
+                    <label>
+                        <input type="checkbox" name="extras" value="tomaten"> Tomaten</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset id="deliverTo" class="fieldset-demo">
+            <legend>Lieferadresse</legend>
+            <div class="bg-transparent">
+                <div class="lbl-inp-container">
+                    <label for="first-name">Vorname: </label>
+                    <input id="first-name" name="first-name" type="text" placeholder="Max">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="last-name">Nachname: </label>
+                    <input id="last-name" name="last-name" type="text" placeholder="Mustermann">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="addr">Straße/Hausnr.: </label>
+                    <input id="addr" name="addr" type="text" placeholder="Musterstr. 2">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="postalCode">PLZ: </label>
+                    <input id="postalCode" name="postalCode" type="text" placeholder="1010">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="place">Ort: </label>
+                    <input id="place" name="place" type="text" placeholder="Wien">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="phone">Tel.Nr.: </label>
+                    <input id="phone" name="phone" type="tel" placeholder="0123/123456789">
+                </div>
+                <div class="lbl-inp-container">
+                    <label for="mail">E-Mail: </label>
+                    <input id="mail" name="mail" type="email" placeholder="max@muster.at">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset id="garlic-choice" class="fieldset-demo">
+            <legend>Knoblauch</legend>
+
+            <select id="select-garlic">
+                <option value="nein">nein, danke</option>
+                <option value="ja">ja, bitte</option>
+                <option value="viel">ja, bitte extra viel</option>
+            </select>
+        </fieldset>
+        <div class="lbl-inp-container">
+            <input class="btn-submit" type="submit" value="Bestellen">
+        </div>
+    </form>
+
+    <div class="output">
+        <h2>
+            Bestellung:
+        </h2>
+        <p id="output">
+
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
