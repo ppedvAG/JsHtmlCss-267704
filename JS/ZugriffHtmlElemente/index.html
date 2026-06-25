@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .submit-button {
+            background-color: aqua;
+        }
+        .submit-button:hover {
+            background-color: lightcyan;
+        }
+        .submit-button:focus {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <form id="rechnerForm">
+        <label for="brutto">Brutto:</label><br>
+        <input type="number" step="0.01" id="brutto" value="0"><br>
+        <label for="steuer">Steuer (Prozent):</label><br>
+        <input type="number" id="steuer" value="19" name="steuer"><br><br>
+        <input type="submit" id="submit" value="Berechnen" class ="submit-button">
+    </form>
+    <p id="output"></p>
+    <br><br>
+    <form id="todoListForm">
+        <label for="todoItem">Todo hinzufügen</label><br>
+        <input type="text" id="todoItem" required>
+        <input type="submit" value="Hinzufügen">
+    </form>
+    <ul id="todoList"></ul>
+
+</body>
+</html>

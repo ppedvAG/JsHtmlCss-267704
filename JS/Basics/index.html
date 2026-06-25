@@ -10,6 +10,13 @@
     <h1>JS Basics</h1>
     <!-- Script wird gestartet -->
     <script>
+        window.alert("Achtung!\nEine Meldung");
+        document.write(window.prompt("Text eingeben: ", "hallo")+"<br><br>");
+        const antwort = window.confirm("Ja?");
+        if(antwort) 
+            document.write("Super!<br>");
+        else
+            document.write("Schade!<br>");
         let name = "Max Mustermann"; // string Variable
         let alter = 24; // Number Variable
 
