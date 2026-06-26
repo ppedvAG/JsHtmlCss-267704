@@ -221,7 +221,15 @@
             line-height: 1.4;
             font-size: 0.85rem;
         }
+
         #menu-toggle:checked ~ .side-menu {
             left:0;
         }
+
+        /* Darkmode simulieren */
+        /* iframe[src*="maps.google.com"],
+        iframe[src*="google.com/maps"] {
+             Invertiert alle Farben (aus Weiß wird Schwarz, etc.) 
+            filter: invert(90%) hue-rotate(180deg) contrast(120%) brightness(110%);
+        } */
 

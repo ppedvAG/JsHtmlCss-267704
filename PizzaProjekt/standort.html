@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unser Standort: Pizza-Zentrale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <label for="menu-toggle" class="hamburger-symbol">☰</label>
+        <div class="nav-links">
+            <a href="index.html">Zurück zur Hauptseite</a>
+        </div>
+
+        <div class="side-menu">
+            <label for="menu-toggle" class="close-btn">✖</label>
+
+            <h3>Pizzeria Infos</h3>
+            <hr>
+
+            <div class="menu-selection">
+                <h4>Öffnungszeiten</h4>
+                <p>Montag - Freitag:<br>11:00 - 22:00</p>
+                <p>Samstag & Sonntag:<br>14:00 - 23:00</p>
+            </div>
+            <div class="menu-selection" style="margin-top: 2rem;">
+                <h4>Standort</h4>
+                <a href="standort.html" class="location-link">Karten/Standort</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="simple-section" style="margin-top: 4rem;">
+        <h2>Unser Standort & Anfahrt</h2>
+        <div class="bg-transparent" style="color: white; padding: 1rem; margin-bottom: 1.5rem;">
+            <p><strong>Pizza-Zentrale GmbH</strong></p>
+            <p>Märzstraße 1, 1150 Wien</p>
+            <p>Telefon: +43 0815 12345</p>
+        </div>
+
+        <h2>Öffnungszeiten vor Ort</h2>
+        <div class="bg-transparent" style="color: white; padding: 1rem; margin-bottom: 1.5rem;">
+            <p>Montag - Freitag: 11:00 - 22:00 Uhr</p>
+            <p>Samstag & Sonntag: 14:00 - 23:00 Uhr</p>
+        </div>
+
+        <h2>Karte</h2>
+        <div style="width: 100%;
+                    max-width: 600px;
+                    height: 400px;
+                    overflow: hidden;
+                    border-radius: 0.5rem;">
+            
+            <!--  Möglichkeit 1: mit openstreetmap -->
+            <!-- <iframe 
+                width="100%"
+                height="100%"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0" 
+                src="https://www.openstreetmap.org/export/embed.html?bbox=16.336608431255847%2C48.19963001910217%2C16.337759098923236%2C48.20165554774687&amp;layer=mapnik&amp;marker=48.200642793435726%2C16.33718376508955" 
+                ></iframe> -->
+            
+            <!--  Möglichkeit 2: mit Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.318870303806!2d16.33722289999999!3d48.2004737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07f1501ce293%3A0x722a50729a528419!2sppedv%20gmbh!5e0!3m2!1sde!2sat!4v1782476921669!5m2!1sde!2sat" 
+                width="100%"
+                height="100%"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+
+    </section>
+</body>
+</html>
