@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // 7. Ausgabe auf der Webseite aktuallisieren
         document.getElementById("output").innerText = JSON.stringify(neueBestellung, null, 2);
 
+        // 8. output Fenster Sichtbar machen
+        document.querySelector(".output").style.display ="block"
     });
 
 

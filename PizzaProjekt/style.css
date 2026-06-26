@@ -3,6 +3,8 @@
         }
 
         body{
+            padding: 60px;
+            scroll-behavior: smooth;
             margin: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             background-color: floralwhite; /* für den Fall, dass das Bild nicht geladen werden kann */
@@ -69,7 +71,47 @@
             box-shadow: 0 0 8px black;
             width: 80%;
             margin: 0 auto;
-            min-height: 100vh;
             padding: 2rem;
             box-sizing: border-box;
+            height: auto;
+            display: none;
         }
+
+        /* Menüband oben am Bildschirm fixieren */
+        .navbar {
+            position:fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            /* rgba: rot, grün, blau, transparenz */
+            background-color: rgba(50, 50, 50, 0.95);
+            /* box-shadow: 0 2px 5px rgba(0,0,0,0.5); */
+            display:flex;
+            justify-content: center;
+            padding: 0.8rem 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            /* font-weight: bold;
+            font-size: 0.9rem; */
+        }
+        .navbar a:hover {
+            color:rgb(255, 113, 113)
+        }
+        .simple-section {
+            width: 80%;
+            margin: 0 auto;
+            padding:  2rem;
+            background: rgba(0,0,0,0.6);
+            box-sizing: border-box;
+        }
+        .simple-section h2 {
+            color: white;
+            margin-top: 0;
+        }
+        .kontakt-form {
+            color:white;
+        }
+

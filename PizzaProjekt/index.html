@@ -10,31 +10,38 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body id="start">
+
+    <!-- Simples Menüband mit nav -->
+    <nav class="navbar">
+        <a href="#start">Pizza bestellen</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#impressum">Impressum</a>
+    </nav>
+
     <!-- 'onsubmit="bestellung(event)"' löschen -->
     <form class="form-demo">
-
         <fieldset id="pizzas" class="fieldset-demo">
             <legend>Pizze</legend>
-            <div class="bg-transparent" >
+            <div class="bg-transparent">
 
                 <div class="lbl-inp-container">
                     <label><input name="pizze" type="radio" value="marg" checked> Margherita</label>
                 </div>
                 <div class="lbl-inp-container">
-                    <label><input name="pizze" type="radio" value="funghi" > Funghi</label>
+                    <label><input name="pizze" type="radio" value="funghi"> Funghi</label>
                 </div>
                 <div class="lbl-inp-container">
                     <label>
-                        <input name="pizze" type="radio" value="tonno" > Tonno</label>
+                        <input name="pizze" type="radio" value="tonno"> Tonno</label>
                 </div>
                 <div class="lbl-inp-container">
                     <label>
-                        <input name="pizze" type="radio" value="salami" > Salami</label>
+                        <input name="pizze" type="radio" value="salami"> Salami</label>
                 </div>
                 <div class="lbl-inp-container">
                     <label>
-                        <input name="pizze" type="radio" value="dellaCasa" > Della Casa</label>
+                        <input name="pizze" type="radio" value="dellaCasa"> Della Casa</label>
                 </div>
             </div>
         </fieldset>
@@ -121,6 +128,40 @@
         </p>
     </div>
 
+    <!-- Kontakt formular -->
+    <section id="kontakt" class="simple-section">
+        <h2>Kontakt</h2>
+        <form class="kontakt-form">
+            <div class="lbl-inp-container">
+                <label for="kontakt-name">Name:</label>
+                <input type="text" id="kontakt-name" placeholder="Dein Name" required>
+            </div>
+            <div class="lbl-inp-container">
+                <label for="kontakt-email">E-Mail:</label>
+                <input type="email" id="kontakt-mail" placeholder="deine@email.com" required>
+            </div>
+            <div class="lbl-inp-container">
+                <label for="kontakt-nachricht">Nachricht:</label>
+                <textarea id="kontakt-nachricht" placeholder="Deine Nachricht an uns..." rows="4" required>    
+                </textarea>
+            </div>
+            <input class="btn-submit" type="submit" value="Nachricht absenden">
+
+        </form>
+    </section>
+
+    <section id="impressum" class="simple-section">
+        <h2>Impressum</h2>
+        <div class ="bg-transparent" style="color:white; padding:1rem;">
+            <p><strong>Pizza-Zentrale GmbH</strong></p>
+            <p>Musterstraße 12, 1010 Wien</p>
+            <p>Vertreten durch: Dominik Enzenhofer</p>
+            <p>Email: support@pizza-zentrale.at</p>
+            <p>Telefon: +43 0815 12345</p>
+        </div>
+    </section>
+
 </body>
+
 
 </html>
