@@ -7,16 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formular</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body id="start">
 
     <!-- Simples Menüband mit nav -->
     <nav class="navbar">
-        <a href="#start">Pizza bestellen</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#impressum">Impressum</a>
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <label for="menu-toggle" class="hamburger-symbol">☰</label>
+        <div class="nav-links">
+            <a href="#start">Pizza bestellen</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#impressum">Impressum</a>
+        </div>
+
+        <div class="side-menu">
+            <label for="menu-toggle" class="close-btn">✖ Schließen</label>
+
+            <h3>Pizzeria Infos</h3>
+            <hr>
+
+            <div class="menu-selection">
+                <h4>Öffnungszeiten</h4>
+                <p>Montag - Freitag:<br>11:00 - 22:00</p>
+                <p>Samstag & Sonntag:<br>14:00 - 23:00</p>
+            </div>
+            <div class="menu-selection" style="margin-top: 2rem;">
+                <h4>Standort</h4>
+                <a href="standort.html" class="location-link">Karten/Standort</a>
+            </div>
+        </div>
     </nav>
 
     <!-- 'onsubmit="bestellung(event)"' löschen -->
