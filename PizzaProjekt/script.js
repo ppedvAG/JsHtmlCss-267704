@@ -1,5 +1,58 @@
 // Gewähleistet, dass das DOM vollständig geladen ist, bevor das Script ausgeführt wird
 document.addEventListener("DOMContentLoaded", function () {
+
+
+    // Alle Cookies abrufen und in einem Array speichern
+    const cookies = document.cookie.split(";");
+    let gespeichertePizza = "";
+    // Nach dem Cookie "letztePizza" suchen
+    for(let i =0; i<cookies.length; i++) {
+        const cookie=cookies[i].trim(); //trimm löscht Leerzeichen am Anfang und am Ende des Strings -> aus " letztePizza " wird "letztePizza"
+        if(cookie.startsWith("letztePizza")) {
+            // Den Wert des Cookies extrahieren (z.B. "salami")
+            gespeichertePizza = cookie.substring("letztePizza=".length);
+            break;
+        }
+    }
+    console.log(gespeichertePizza)
+
+    // Wenn eien Cookie gefunden wurde, die Felder ausfüllen
+    if(gespeichertePizza) {
+        try {
+            const daten = JSON.parse(decodeURIComponent(gespeichertePizza));
+            console.log(daten)
+            if(daten.sorte) {
+                const pizzaRadio = document.querySelector(`input[name="pizze"][value="${daten.sorte}"]`);
+                if (pizzaRadio) pizzaRadio.checked=true;
+            }
+            if(daten.extras && Array.isArray(daten.extras)) {
+                document.querySelectorAll('input[name="extras"]').forEach(cb => cb.checked = false);
+                daten.extras.forEach(extraWert => {
+                    const extraCheckbox = document.querySelector(`input[name="extras"][value="${extraWert}"]`);
+                    if(extraCheckbox) extraCheckbox.checked=true;
+                })
+            }
+            if(daten.knoblauch) {
+                const knoblauchSelect= document.getElementById("select-garlic");
+                if(knoblauchSelect) knoblauchSelect.value=daten.knoblauch;
+            } 
+
+            if (daten.lieferadresse) {
+                const adr = daten.lieferadresse;
+                if (document.getElementById("first-name")) document.getElementById("first-name").value = adr.vorname || "";
+                if (document.getElementById("last-name"))  document.getElementById("last-name").value = adr.nachname || "";
+                if (document.getElementById("addr"))       document.getElementById("addr").value = adr.strasse || "";
+                if (document.getElementById("postalCode")) document.getElementById("postalCode").value = adr.plz || "";
+                if (document.getElementById("place"))      document.getElementById("place").value = adr.ort || "";
+                if (document.getElementById("phone"))      document.getElementById("phone").value = adr.telefon || "";
+                if (document.getElementById("mail"))       document.getElementById("mail").value = adr.email || "";
+            }
+        } catch (e) {
+            console.error("Fehler beim Laden der Cookie-Daten: ", e)
+        }
+    }
+
+
     // Klasse für die Lieferadresse
     class Lieferadresse {
         constructor(vorname, nachname, strasse, plz, ort, telefon, email) {
@@ -60,7 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // 5. Instanz der Klasse Pizza erstellen (enthält die Adresse)
         const neueBestellung = new Pizza(sorte, extras, knoblauch, adresse);
 
+
+
         console.log(neueBestellung);
+
+        const cookieInhalt = encodeURIComponent(JSON.stringify(neueBestellung));
+        document.cookie = `letztePizza=${cookieInhalt}; max-age= ${60*60*24*30}; path=/`;
 
         // 6. JSON-Datei generieren und herunterladen
         speichereAlsJsonDatei(neueBestellung);
