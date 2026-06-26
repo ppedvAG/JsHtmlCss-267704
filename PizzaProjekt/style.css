@@ -141,6 +141,12 @@
             top: 50%;
             transform: translateY(-50%);
             transition: color 0.3s;
+            
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hamburger-symbol:hover {
@@ -158,7 +164,7 @@
         .side-menu {
             position: fixed;
             top:0;
-            left:0px; /*Startet außerhalb des linken Bildschirms*/
+            left:-300px; /*Startet außerhalb des linken Bildschirms*/
             width: 280px;
             height: 100vh; /*Längliches Fenster bis ganz nach unten*/
             background-color: rgba(30, 30, 30);
@@ -169,41 +175,43 @@
             z-index: 2000; /*Liegt über dem Inhalt der Seite, verschiebt nichts*/
             transition: left 0.4s ease; /*Erzeugt den weichen Reinschieb-Effekt von links*/
         }
-
         .close-btn {
             display: block;
             text-align: left;
             cursor: pointer;
             color: #aaa;
-            margin-bottom: 2rem;
+            margin-bottom: 0;
+            font-size: 1.7rem;
+            position: absolute;
+            left: 1.5rem;
+            top:14px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
         .close-btn:hover {
             color: rgb(211, 94, 94);
         }
-
         .side-menu h3 {
-            margin-top: 0;
+            margin-top: 50px;
         }
-
         .side-menu hr {
             border: 0;
             height: 1px;
             background-color: white;
             margin-bottom: 1.5rem;
         }
-
         .side-menu h4 {
             margin-bottom: 0.3rem;
             margin-top: 0;
         }
-
         .side-menu p {
             margin: 0 0 0.8rem 0;
             line-height: 1.4;
             font-size: 0.85rem;
         }
-
         .side-menu a.location-link {
             margin: 0;
             display: inline-block;
@@ -212,5 +220,8 @@
             text-align: left;
             line-height: 1.4;
             font-size: 0.85rem;
+        }
+        #menu-toggle:checked ~ .side-menu {
+            left:0;
         }
 
