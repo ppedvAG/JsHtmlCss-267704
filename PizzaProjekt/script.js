@@ -113,4 +113,23 @@ document.addEventListener("DOMContentLoaded", function () {
         //      Wichtig, um Speicherlecks (Memory Leaks) zu vermeiden, da die URL nicht mehr gebraucht wird
         URL.revokeObjectURL(url);
     }
+
+    // Neu: EventListener für das Kontaktformular
+    const kontaktForm = document.querySelector(".kontakt-form");
+
+    kontaktForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Werte auslesen
+        const name = document.getElementById("kontakt-name").value;
+        const email = document.getElementById("kontakt-mail").value;
+        const nachricht = document.getElementById("kontakt-nachricht").value;
+
+        // Einfache Erfolgsmeldung im Browser anzeigen
+        alert(`Vielen Dank für deine Nachricht, ${name}!\nWir werden uns unter ${email} melden.`);
+
+        //Formular leeren
+        kontaktForm.reset();
+    })
+
 });

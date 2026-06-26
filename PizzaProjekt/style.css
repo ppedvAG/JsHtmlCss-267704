@@ -56,6 +56,12 @@
             border-radius: 0.2rem;
             padding: 0.5rem 1rem;
             font-size: 1rem;
+            /*neu für Buttons rechts und gleiche Breite*/
+            display: block;
+            margin-left: auto; /*Erzwingt Ausrichtung am rechten Rand*/
+            width: 230px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
         .btn-submit:hover{
@@ -113,5 +119,14 @@
         }
         .kontakt-form {
             color:white;
+        }
+        .kontakt-form input[type="text"],
+        .kontakt-form input[type="email"],
+        .kontakt-form textarea {
+            display: inline-block;
+            width: 200px;
+            box-sizing: border-box;
+            vertical-align: top;
+            margin-left: auto;
         }
 
